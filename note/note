@@ -4,3 +4,4 @@ base\02 movie-app\08 install graphql
 base\02 movie-app\09 graphql schema 
 base\02 movie-app\10 Root Query
 base\02 movie-app\11 resolve
+base\02 movie-app\12 run queries
