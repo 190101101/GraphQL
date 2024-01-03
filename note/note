@@ -12,3 +12,4 @@ base\02 movie-app\16 GraphQLList
 base\02 movie-app\21 dotenv
 base\02 movie-app\22 create mongodb schema
 base\02 movie-app\23 first mutation addMovie
+base\02 movie-app\24 addDirector
