@@ -8,3 +8,5 @@ npm install dotenv
 npm install dotenv
 npm install create-react-app
 npx create-react-app .
+npm install @apollo/client
+npm install cors --save
