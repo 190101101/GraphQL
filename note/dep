@@ -10,3 +10,4 @@ npm install create-react-app
 npx create-react-app .
 npm install @apollo/client
 npm install cors --save
+npm install antd --save
