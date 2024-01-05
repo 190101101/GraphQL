@@ -5,7 +5,7 @@
 }
 
 mutation{
-    addMovie(title:"test", year:1991, description:"Lorem ipsum", directorId:"6594dec694c45a2ce333ffa9"){
+    addMovie(title:"test2", year:1991, description:"Lorem ipsum", directorId:"6594dec694c45a2ce333ffa9"){
         title,
         description,
         year,
