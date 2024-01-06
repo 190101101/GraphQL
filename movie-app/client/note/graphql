@@ -13,7 +13,7 @@ mutation{
 }
 
 mutation{
-    addDirector(name:"Quentin Torantino", birth:1930){
+    addDirector(name:"test 3", birth:2003){
         name,
         birth,
     }

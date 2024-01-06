@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon example/src/server.js"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
