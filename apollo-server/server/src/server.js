@@ -3,7 +3,7 @@ const { ApolloServer, gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Query {
-    name: String
+    name: String!
     surname: String
     age: Int
   }
