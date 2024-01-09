@@ -3,3 +3,5 @@ npm install express --save
 npm install apollo-server --save
 npm install graphql --save
 npm install nodemon --save
+npm install dotenv --save
+npm install mongoose --save
