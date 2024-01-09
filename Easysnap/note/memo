@@ -1,0 +1,8 @@
+login vo8BSvLXAN82fUnV
+password Zn6L4XUlzArV6Pfh
+
+mongodb+srv://vo8BSvLXAN82fUnV:<password>@cluster0.eoxlsw6.mongodb.net/?retryWrites=true&w=majority
+
+mongodb+srv://vo8BSvLXAN82fUnV:Zn6L4XUlzArV6Pfh@cluster0.eoxlsw6.mongodb.net/?retryWrites=true&w=majority
+
+mongodb+srv://vo8BSvLXAN82fUnV:Zn6L4XUlzArV6Pfh@cluster0.eoxlsw6.mongodb.net
