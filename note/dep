@@ -12,3 +12,4 @@ npm install @apollo/client
 npm install cors --save
 npm install antd --save
 npm install apollo-server-express
+npm install apollo-server
