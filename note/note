@@ -62,3 +62,5 @@ base\07 easysnap\71 createUser mutation 1
 base\07 easysnap\72 createUser mutation 2
 base\07 easysnap\73 createUser mutation 3
 base\07 easysnap\74 bcrypt
+base\07 easysnap\75 user query
+base\07 easysnap\76 users query
