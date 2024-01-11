@@ -5,3 +5,4 @@ npm install graphql --save
 npm install nodemon --save
 npm install dotenv --save
 npm install mongoose --save
+npm install bcrypt --save
