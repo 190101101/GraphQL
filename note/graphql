@@ -1,0 +1,17 @@
+mutation{
+    signIn(data:{
+        username:"cookie",
+        password:"zxczxc"
+    }){
+        username
+    }
+}
+
+mutation{
+    createUser(data:{
+        username:"apsi",
+        password:"111"
+    }){
+        username
+    }
+}
