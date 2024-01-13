@@ -71,3 +71,4 @@ base\07 easysnap\81 snap user query
 base\07 easysnap\82 user snaps query
 
 base\08 easysnap\83 signin mutation
+base\08 easysnap\84 jwt
