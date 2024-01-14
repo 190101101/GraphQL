@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button, Modal } from "antd";
-import { Query, Mutation } from "@apollo/client/react/components";
+import {Modal } from "antd";
+import { Query } from "@apollo/client/react/components";
 import { getMoviesQuery, getMovieQuery } from "../queries/queries";
 
 class MovieList extends Component {

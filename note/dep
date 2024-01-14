@@ -6,8 +6,6 @@ npm install lodash --save
 npm install mongoose --save
 npm install dotenv
 npm install dotenv
-npm install create-react-app
-npx create-react-app .
 npm install @apollo/client
 npm install cors --save
 npm install antd --save
@@ -15,3 +13,10 @@ npm install apollo-server-express
 npm install apollo-server
 npm install bcrypt --save
 npm install jsonwebtoken --save
+
+#
+npm install -g create-react-app
+npx create-react-app client
+-#create-react-app client
+npm install react-scripts@latest
+#

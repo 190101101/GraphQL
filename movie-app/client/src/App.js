@@ -11,8 +11,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="app">
-      <NewMovieForm />
-      <MovieList />
+        <NewMovieForm />
+        <MovieList />
       </div>
     </ApolloProvider>
   );
