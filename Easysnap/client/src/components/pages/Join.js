@@ -3,12 +3,14 @@ import { CREATE_USER } from "../../queries";
 import { Mutation } from "@apollo/client/react/components";
 import Error from "../Error";
 
+const initialState = {
+  username: "",
+  password: "",
+  confirm: "",
+};
+
 class Join extends Component {
-  state = {
-    username: "",
-    password: "",
-    confirm: "",
-  };
+  state = { ...initialState };
 
   onChange = (e) => {
     const { name, value } = e.target;
@@ -17,20 +19,27 @@ class Join extends Component {
     });
   };
 
+  resetState = () => {
+    this.setState({ ...initialState });
+  };
+
   onSubmit = (e, createUser) => {
     e.preventDefault();
     createUser()
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        this.resetState();
+      })
       .catch((e) => console.log(e));
   };
 
   formValidate = () => {
     const { username, password, confirm } = this.state;
     return !username || !password || !confirm || password !== confirm;
-  }
+  };
 
   render() {
-    const { username, password } = this.state;
+    const { username, password, confirm } = this.state;
     return (
       <div>
         <Mutation mutation={CREATE_USER} variables={{ username, password }}>
@@ -43,6 +52,7 @@ class Join extends Component {
             >
               <label>
                 <input
+                  value={username}
                   onChange={this.onChange}
                   name="username"
                   type="text"
@@ -51,6 +61,7 @@ class Join extends Component {
               </label>
               <label>
                 <input
+                  value={password}
                   onChange={this.onChange}
                   name="password"
                   type="password"
@@ -59,6 +70,7 @@ class Join extends Component {
               </label>
               <label>
                 <input
+                  value={confirm}
                   onChange={this.onChange}
                   name="confirm"
                   type="password"
