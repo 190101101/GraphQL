@@ -25,8 +25,7 @@ class Login extends React.Component {
     signIn()
       .then(({data}) => {
         console.log(data);
-        localStorage.setItem('token', data.signIn.token);
-        console.log(data.signIn.token);
+        // localStorage.setItem('token', data.signIn.token);
         this.resetState();
       })
       .catch((e) => console.log(e));

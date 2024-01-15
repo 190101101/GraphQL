@@ -25,9 +25,7 @@ class Join extends React.Component {
     e.preventDefault();
     createUser()
       .then(({data}) => {
-        console.log(data);
         localStorage.setItem('token', data.createUser.token);
-        console.log(data.createUser.token);
         this.resetState();
       })
       .catch((e) => console.log(e));
