@@ -87,3 +87,16 @@ base\09 snap client\98 form validate
 base\09 snap client\99 reset form
 base\09 snap client\100 mutation login 1
 base\09 snap client\104 form reset login 5
+
+base\10 auth client\105 token localStorage
+base\10 auth client\106 auth header
+base\10 auth client\107 token verify
+base\10 auth client\108 active user context
+base\10 auth client\109 active user resolver
+base\10 auth client\110 session wrapper
+base\10 auth client\111 redirect
+base\10 auth client\112 refetch
+base\10 auth client\113 active user header and profile
+base\10 auth client\114 logout
+base\10 auth client\115 profile
+base\10 auth client\116 auth component
