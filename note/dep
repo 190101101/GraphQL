@@ -14,6 +14,7 @@ npm install apollo-server
 npm install bcrypt --save
 npm install jsonwebtoken --save
 npm install react-router-dom@5.3.4 --save
+npm install --save moment react-moment
 
 #
 npm install -g create-react-app
