@@ -15,3 +15,12 @@ mutation{
         username
     }
 }
+
+mutation{
+    createSnap(data:{
+        text:"hello i am zzz",
+        user_id:"65a56ae4133df63b4a771631 "
+    }){
+        username
+    }
+}
