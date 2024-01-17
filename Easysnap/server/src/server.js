@@ -31,9 +31,7 @@ mongoose
       try {
         const activeUser = await jwt.verify(token, process.env.SECRET_KEY);
         req.activeUser = activeUser;
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
     }
     next();
   });

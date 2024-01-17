@@ -24,3 +24,20 @@ mutation{
         username
     }
 }
+
+mutation($text: String! $user_id:ID!){
+    createSnap(data:{
+        text: $text
+        user_id: $user_id
+    }){
+        id
+    }
+}
+
+{
+    "data": {
+      "createSnap": {
+        "id": "65a7930b683743fdd12906dd"
+      }
+    }
+  }
