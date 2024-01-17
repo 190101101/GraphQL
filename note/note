@@ -111,3 +111,9 @@ base\11 easysnap\123 add snap mutation 2
 base\11 easysnap\124 add snap mutation 3
 base\11 easysnap\125 add snap mutation 4
 base\11 easysnap\126 form reset and refetch
+
+base\12 Optimistic UI\127 what is Optimistic UI
+base\12 Optimistic UI\128 readCache and writeCache
+base\12 Optimistic UI\129 response 1
+base\12 Optimistic UI\130 response 2
+base\12 Optimistic UI\131 response 3 loader
