@@ -16,6 +16,11 @@ class Home extends React.Component {
     });
   };
 
+  formValidate = () => {
+    const { text } = this.state;
+    return !text || text === " ";
+  };
+
   componentDidMount = () => {
     const { session } = this.props;
 
@@ -28,9 +33,12 @@ class Home extends React.Component {
 
   onSubmit = (e, addSnap) => {
     e.preventDefault();
-    addSnap()
-      .then(({ data }) => console.log(data))
-      .catch((e) => console.log(e));
+
+    if (!this.formValidate()) {
+      addSnap()
+        .then(({ data }) => console.log(data))
+        .catch((e) => console.log(e));
+    }
   };
 
   render() {
