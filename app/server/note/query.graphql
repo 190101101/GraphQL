@@ -5,3 +5,11 @@ query{
     createdAt
   }
 }
+
+query{
+  users{
+    username
+    password
+    createdAt
+  }
+}
