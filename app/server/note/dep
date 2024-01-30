@@ -4,3 +4,5 @@ npm install express@4.16.4 --save
 npm install apollo-server-express@2.1.0 --save
 npm install graphql-import@0.7.1 --save
 npm install graphql@14.0.2 --save
+npm install dotenv --save
+npm install mongoose --save
