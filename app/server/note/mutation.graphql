@@ -5,3 +5,14 @@ mutation {
     createdAt
   }
 }
+
+mutation {
+  CreateSnap(data: { 
+    user_id: "65b90fb1ac72c9d40dd23e6f", 
+    text: "hello cookie 2" 
+  }) {
+    id
+    text
+    createdAt
+  }
+}

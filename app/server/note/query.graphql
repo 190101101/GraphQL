@@ -23,3 +23,10 @@ query{
   }
 }
 
+query{
+  snaps{
+    id
+    text
+    createdAt
+  }
+}
