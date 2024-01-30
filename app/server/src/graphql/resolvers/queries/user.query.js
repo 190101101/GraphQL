@@ -1,4 +1,4 @@
-const Query = {
+module.exports = {
     user:(parent, args) => {
         return {
             username:'cookie',
@@ -7,5 +7,3 @@ const Query = {
         }
     }
 }
-
-module.exports = Query;

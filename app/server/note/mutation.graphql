@@ -1,0 +1,7 @@
+mutation {
+  CreateUser(data: { username: "cookie", password: "askldjladd" }) {
+    username
+    password
+    createdAt
+  }
+}
