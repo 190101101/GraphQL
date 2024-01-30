@@ -7,9 +7,19 @@ query{
 }
 
 query{
+  user(id:"65b90fb1ac72c9d40dd23e6f"){
+    id
+    username
+    password
+    createdAt
+  }
+}
+
+query{
   users{
     username
     password
     createdAt
   }
 }
+
