@@ -30,3 +30,11 @@ query{
     createdAt
   }
 }
+
+query{
+  snap(id:"65b92a71254582819b567449"){
+    id
+    text
+    createdAt
+  }
+}
