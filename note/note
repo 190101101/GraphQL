@@ -64,7 +64,7 @@ base\07 easysnap\73 createUser mutation 3
 base\07 easysnap\74 bcrypt
 base\07 easysnap\75 user query
 base\07 easysnap\76 users query
-base\07 easysnap\77 snap model query
+base\07 easysnap\77 snap model
 base\07 easysnap\78 createSnap mutation
 base\07 easysnap\80 snaps
 base\07 easysnap\81 snap user query
