@@ -1,23 +1,15 @@
-const fs = require("fs");
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
+const { importSchema } = require("graphql-import");
 const resolvers = require("./graphql/resolvers/index");
 
-const types = [
-    `${__dirname}/graphql/Types/user.graphql`,
-].map((rows) => fs.readFileSync(rows, { encoding: "utf-8" }));
-
 const server = new ApolloServer({
-  typeDefs: [types],
-  resolvers,
+  typeDefs: importSchema("./src/graphql/schema.graphql"),
+  resolvers:resolvers,
 });
 
-(async () => {
-  await server.start();
+const app = express();
 
-  const app = express();
-  server.applyMiddleware({ app });
-  app.listen({ port: 4001 }, () => {
-    console.log(`http://localhost:4001${server.graphqlPath}`);
-  });
-})();
+server.applyMiddleware({ app });
+
+app.listen({ port: 4000 }, () => console.log(`http://localhost:4000/graphql`));

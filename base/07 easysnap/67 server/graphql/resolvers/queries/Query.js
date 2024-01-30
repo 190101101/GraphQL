@@ -1,11 +1,9 @@
 const Query = {
     user:(parent, args) => {
         return {
-            id: 1,
-            name: 'cookie',
-            surname: 'cookies'
+            name:'cookie'
         }
-    },
+    }
 }
 
 module.exports = Query;
