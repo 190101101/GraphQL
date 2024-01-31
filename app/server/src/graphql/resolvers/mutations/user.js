@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const token = require("../../../utils/token");
 
 module.exports = {
-  CreateUser: async (parent, { data: { username, password } }, { User }) => {
+  CreateUser: async (parent, { data: { username, password } },{ User }) => {
     const user = await User.findOne({ username });
 
     if (user) {
@@ -11,7 +11,7 @@ module.exports = {
 
     const newUser = await new User({ username, password }).save();
 
-    return { token: token.generate(newUser, "1h") };
+    return { token: token.generate(newUser, "168h") };
   },
   SignIn: async (parent, { data: { username, password } }, { User }) => {
     const user = await User.findOne({ username });
@@ -26,6 +26,6 @@ module.exports = {
       throw new Error("password is wrong");
     }
 
-    return { token: token.generate(user, "1h") };
+    return { token: token.generate(user, "168h") };
   },
 };

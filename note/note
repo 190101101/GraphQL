@@ -87,7 +87,7 @@ base\09 snap client\97 loading and error
 base\09 snap client\98 form validate
 base\09 snap client\99 reset form
 base\09 snap client\100 mutation login 1
-base\09 snap client\104 form reset login 5
+base\09 snap client\104 login register
 
 base\10 auth client\105 token localStorage
 base\10 auth client\106 auth header
