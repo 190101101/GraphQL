@@ -16,3 +16,12 @@ mutation {
     createdAt
   }
 }
+
+mutation {
+  SignIn(data: { 
+    username: "apsi", 
+    password: "111" 
+  }) {
+    token
+  }
+}
