@@ -75,7 +75,7 @@ base\08 easysnap\83 signin mutation
 base\08 easysnap\84 jwt
 base\08 easysnap\85 createuser with jwt
 
-base\09 snap client\88 build client
+base\09 snap client\88 apollo client
 base\09 snap client\89 UI
 base\09 snap client\90 UI 2
 base\09 snap client\91 UI 3
