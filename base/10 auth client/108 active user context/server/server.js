@@ -16,9 +16,9 @@ const server = new ApolloServer({
   typeDefs: importSchema("./src/graphql/schema.graphql"),
   resolvers: resolvers,
   context: ({ req }) => ({
-    activeUser: req.activeUser,
     User,
     Snap,
+    activeUser: req.activeUser,
   }),
 });
 
