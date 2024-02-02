@@ -24,7 +24,6 @@ const app = express();
 
 app.use((req, res, next) => {
   const token = req.headers["authentication"];
-  console.log(token);
 
   if (token && token.length > 10 && token !== null) {
     try {
