@@ -126,7 +126,7 @@ class Home extends React.Component {
                         key={snap.id}
                         className={snap.id < 0 ? "optimistic" : ""}
                       >
-                        <div class="title">
+                        <div className="title">
                           <span className="username">
                             @{snap.user.username}{" "}
                           </span>
