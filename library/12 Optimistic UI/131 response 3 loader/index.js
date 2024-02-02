@@ -23,7 +23,6 @@ const client = new ApolloClient({
   link: concat(authMiddleware, httpLink),
 });
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={client}>
