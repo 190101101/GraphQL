@@ -101,6 +101,7 @@ base\10 auth client\113 active user header and profile
 base\10 auth client\114 logout
 base\10 auth client\115 profile
 base\10 auth client\116 auth component
+base\10 auth client\116 docs
 
 base\11 easysnap\117 get snaps
 base\11 easysnap\118 time ago
