@@ -25,7 +25,8 @@ const app = express();
 app.use((req, res, next) => {
   const token = req.headers["authentication"];
 
-  if (token && token.length > 10 && token !== null) {
+  // if (token && token.length > 10 && token !== null) {
+  if (token && token !== null) {
     try {
       req.activeUser = jwt.verify(
         token,
