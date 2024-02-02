@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { SIGN_IN } from "../graphql/mutation";
 import { ACTIVE_USER } from "../graphql/query";
@@ -18,11 +18,10 @@ const Login = () => {
     update(proxy, result) {
       console.log(result);
       localStorage.setItem("token", result.data.SignIn.token);
-      history.push("/");
+      history.push('/');
     },
     onError(error) {
-      console.log(error.graphQLErrors[0]);
-      setError(error.graphQLErrors[0]);
+      setError(error.graphQLErrors[0].message);
     },
     refetchQueries: [{ query: ACTIVE_USER }],
   });
@@ -74,9 +73,9 @@ const Login = () => {
         </label>
       </form>
       {loading && <div className="loading">loading...</div>}
-      {/* {error && <div className="loading">{error}</div>} */}
+      {error && <div className="loading">{error}</div>}
     </>
   );
 };
 
-export default withRouter(Login);
+export default Login;

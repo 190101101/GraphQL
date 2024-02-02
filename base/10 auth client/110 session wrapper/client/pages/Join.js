@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, withRouter } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { SIGN_IN } from "../graphql/mutation";
-import { ACTIVE_USER } from "../graphql/query";
+import { CREATE_USER } from "../graphql/mutation";
 
 const initialState = {
   username: "",
   password: "",
+  confirm: "",
 };
 
-const Login = () => {
-  const history = useHistory();
+const Join = () => {
   const [error, setError] = useState(false);
   const [values, setValues] = useState(initialState);
 
-  const [SignInMutation, { loading }] = useMutation(SIGN_IN, {
+  const [CreateUserMutation, { loading }] = useMutation(CREATE_USER, {
     update(proxy, result) {
       console.log(result);
       localStorage.setItem("token", result.data.SignIn.token);
-      history.push("/");
+      // AnotherMutation({
+      //   variables: {
+      //     token: result.data.SignIn.token,
+      //   },
+      // });
     },
     onError(error) {
-      console.log(error.graphQLErrors[0]);
-      setError(error.graphQLErrors[0]);
+      setError(error.graphQLErrors[0].message);
     },
-    refetchQueries: [{ query: ACTIVE_USER }],
   });
 
   const onChange = (e) => {
@@ -32,20 +32,21 @@ const Login = () => {
   };
 
   const formValidation = () => {
-    const { username, password } = values;
-    return !username || !password;
+    const { username, password, confirm } = values;
+    return !username || !password || password !== confirm;
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    SignInMutation({ variables: values });
+    console.log(values);
+    CreateUserMutation({ variables: values });
     setValues(initialState);
   };
 
   useEffect(() => {
     setTimeout(() => {
       setError(false);
-    }, 1000);
+    }, 3000);
   }, [error]);
 
   return (
@@ -53,30 +54,39 @@ const Login = () => {
       <form onSubmit={onSubmit} className="user-form">
         <label>
           <input
+            type="text"
             onChange={onChange}
             value={values.username}
-            type="text"
             name="username"
             placeholder="username"
           />
         </label>
         <label>
           <input
+            type="password"
             onChange={onChange}
             value={values.password}
-            type="password"
             name="password"
             placeholder="password"
           />
         </label>
         <label>
-          <button disabled={loading || formValidation()}>Login</button>
+          <input
+            type="password"
+            onChange={onChange}
+            value={values.confirm}
+            name="confirm"
+            placeholder="confirm"
+          />
+        </label>
+        <label>
+          <button disabled={loading || formValidation()}>join</button>
         </label>
       </form>
       {loading && <div className="loading">loading...</div>}
-      {/* {error && <div className="loading">{error}</div>} */}
+      {error && <div className="loading">{error}</div>}
     </>
   );
 };
 
-export default withRouter(Login);
+export default Join;

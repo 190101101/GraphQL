@@ -6,14 +6,14 @@ import Home from "./pages/Home";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
 
-const Rootes = ({refetch}) => {
+const Root = () => {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/login" render={() => <Login refetch={refetch}/>} />
-        <Route path="/join" render={() => <Join refetch={refetch}/>} />
+        <Route path="/join" component={Join} />
+        <Route path="/login" component={Login} />
         <Route>
           <Redirect to="/" />
         </Route>
@@ -22,7 +22,7 @@ const Rootes = ({refetch}) => {
   );
 };
 
-const SessionHookWrapper = SessionHook(Rootes);
+const SessionHookWrapper = SessionHook(Root);
 
 const App = () => {
   return (
