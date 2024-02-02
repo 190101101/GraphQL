@@ -17,7 +17,7 @@ const Rootes = ({ refetch, session }) => {
           <Route path="/" exact component={Home} />
           <Route path="/login" render={() => <Login refetch={refetch} />} />
           <Route path="/join" render={() => <Join refetch={refetch} />} />
-          <Route path="/profile" render={() => <Profile/>} />
+          <Route path="/profile" render={() => <Profile session={session}/>} />
           <Route>
             <Redirect to="/" />
           </Route>

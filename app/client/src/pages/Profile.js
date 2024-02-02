@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({session}) => {
   return (
     <div>Profile</div>
   )

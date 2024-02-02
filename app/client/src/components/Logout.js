@@ -3,17 +3,17 @@ import { withRouter } from "react-router-dom";
 import { ApolloConsumer } from "@apollo/client";
 
 const Logout = ({ history }) => {
-  const onClick = (history, client) => {
-    localStorage.removeItem("token");
-    history.push("/");
+  const onClick = (client, history) => {
     client.resetStore();
+    localStorage.removeItem("token");
+    history.push("/login");
   };
 
   return (
     <ApolloConsumer>
       {(client) => {
         console.log(client);
-        return <button onClick={() => onClick(history, client)}>logout</button>;
+        return <button onClick={() => onClick(client, history)}>logout</button>;
       }}
     </ApolloConsumer>
   );
