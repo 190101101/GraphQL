@@ -27,19 +27,6 @@ const Home = ({ session }) => {
           },
         });
       },
-      optimisticResponse: {
-        __typename: "Mutation",
-        CreateSnap: {
-          __typename: "Snap",
-          id: Math.round(Math.random() * -1000000),
-          text: values.text,
-          createdAt: new Date(),
-          user: {
-            __type: "User",
-            ...session.activeUser,
-          },
-        },
-      },
       refetchQueries: [{ query: SNAPS }],
     }
   );
@@ -94,7 +81,7 @@ const Home = ({ session }) => {
             }
           />
         </form>
-        {/* {loadingMutation && <div className="loading">loading...</div>} */}
+        {loadingMutation && <div className="loading">loading...</div>}
       </div>
       <div>
         {loading && <div className="loading">loading...</div>}
@@ -103,7 +90,7 @@ const Home = ({ session }) => {
         <ul className="snaps">
           {data &&
             data.snaps.map((snap) => (
-              <li key={snap.id} className={snap.id < 0 ? 'optimistic' : ''}>
+              <li key={snap.id}>
                 <div className="title">
                   <span className="username">@{snap.user.username} </span>
                   <span>{snap.text}</span>
