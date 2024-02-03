@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
+import Session from "./hooks/Session";
+import Auth from "./hooks/Auth";
+
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
 
-import Session from "./hooks/Session";
-import Auth from "./hooks/Auth";
 
 const Rootes = ({ refetch, session }) => {
   return (
