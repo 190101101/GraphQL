@@ -1,0 +1,12 @@
+subscription{
+  SnapAdded{
+    id
+    text
+    createdAt
+    user{
+      id
+      username
+      createdAt
+    }
+  }
+}
