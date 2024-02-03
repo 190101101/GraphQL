@@ -1,9 +1,9 @@
 const user = require('./user');
 const snap = require('./snap');
 
-const Subscriptions = {
-    ...snap,
+const Mutation = {
     ...user,
+    ...snap,
 }
 
-module.exports = Subscriptions;
+module.exports = Mutation;
