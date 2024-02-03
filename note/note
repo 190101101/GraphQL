@@ -129,3 +129,5 @@ base\13 subscriptions server\134 publish
 base\13 subscriptions server\135 snap subscription
 base\13 subscriptions server\136 with filter
 base\13 subscriptions server\137 new user
+
+base\14 subscriptions client\138 websocket
