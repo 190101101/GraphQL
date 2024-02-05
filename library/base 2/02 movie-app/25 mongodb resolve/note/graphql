@@ -1,0 +1,39 @@
+{
+  movies{
+    title
+  }
+}
+
+mutation{
+    addMovie(title:"test", year:1991, description:"Lorem ipsum", directorId:"6594dec694c45a2ce333ffa9"){
+        title,
+        description,
+        year,
+    }
+}
+
+mutation{
+    addDirector(name:"Quentin Torantino", birth:1930){
+        name,
+        birth,
+    }
+}
+
+{
+  movie(id:"6594df8401f585c638de6432"){
+    title,
+    year,
+    director{
+      name
+    }
+  }
+}
+
+{
+  director(id:"6594dec694c45a2ce333ffa9"){
+    name,
+    movies{
+      title
+    }
+  }
+}

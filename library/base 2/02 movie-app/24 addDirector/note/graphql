@@ -1,0 +1,14 @@
+mutation{
+    addMovie(title:"Godfather", year:1972, description:"Lorem ipsum", directorId:"fwfwewefew"){
+        title,
+        description,
+        year,
+    }
+}
+
+mutation{
+    addDirector(name:"Quentin Torantino", birth:1930){
+        name,
+        birth,
+    }
+}

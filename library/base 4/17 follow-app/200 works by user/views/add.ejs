@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center">add work</h3>
+      <form>
+        <div class="mb-1">
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="title"
+            required
+          />
+        </div>
+        <div class="mb-1">
+          <input
+            type="text"
+            name="description"
+            class="form-control"
+            placeholder="description"
+          />
+        </div>
+        <div class="mb-1">
+          <input
+            type="date"
+            name="start"
+            class="form-control"
+            placeholder="start"
+            required
+          />
+        </div>
+        <div class="mb-1">
+          <input
+            type="date"
+            name="finish"
+            class="form-control"
+            placeholder="finish"
+            required
+          />
+          <p class="finish-error text-danger"></p>
+        </div>
+        <button type="submit" class="btn btn-success">add</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
+
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const title = form.title.value;
+    const description = form.description.value;
+    const start = form.start.value;
+    const finish = form.finish.value;
+
+    try {
+      const response = await fetch("/work-add", {
+        method: "POST",
+        body: JSON.stringify({ title, description, start, finish }),
+        headers: { "Content-Type": "application/json" },
+      });
+      
+      const data = await response.json();
+      
+      if(data.work){
+        location.assign('/works');
+      }
+
+    } catch (error) {
+      console.log(error);
+    }
+  });
+</script>

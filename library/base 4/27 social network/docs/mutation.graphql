@@ -1,0 +1,120 @@
+query {
+  articles {
+    id
+    article
+    username
+    createdAt
+  }
+}
+
+query {
+  article(id: "65b137d0c10eb912148b4875") {
+    id
+    article
+    username
+    createdAt
+    comments {
+      id
+      comment
+      username
+    }
+  }
+}
+
+mutation {
+  register(
+    RegisterInput: {
+      username: "apsi"
+      email: "apsi@gmail.com"
+      password: "zxc123"
+      confirm: "zxc123"
+    }
+  ) {
+    id
+    username
+    email
+    token
+    password
+  }
+}
+
+mutation {
+  login(LoginInput: { username: "zxc", password: "zxc" }) {
+    id
+    username
+    email
+    password
+    token
+  }
+}
+
+mutation {
+  CreateArticle(CreateArticleInput: { article: "hello from cookie" }) {
+    article
+  }
+}
+
+mutation {
+  DeleteArticle(DeleteArticleInput: { id: "65b24095761fb09212b12a41" }) {
+    article
+  }
+}
+
+mutation {
+  CreateComment(
+    CreateCommentInput: {
+      articleId: "65b24095761fb09212b12a41"
+      comment: "this is first comment"
+    }
+  ) {
+    id
+    article
+    comments {
+      comment
+      username
+    }
+  }
+}
+
+mutation {
+  DeleteArticle(DeleteArticleInput: { id: "65b24095761fb09212b12a41" }) {
+    article
+    comments {
+      comment
+      username
+    }
+  }
+}
+
+mutation {
+  DeleteComment(
+    DeleteCommentInput: {
+      id: "65b24095761fb09212b12a41"
+      articleId: "65b137d0c10eb912148b4875"
+    }
+  ) {
+    id
+    article
+    username
+    createdAt
+    comments {
+      id
+      comment
+      username
+    }
+  }
+}
+
+mutation {
+  LikeArticle(LikeArticleInput: { id: "65b22cf5b3833bb61f33b322" }) {
+    id
+    article
+    username
+    createdAt
+    likes {
+      id
+      username
+      createdAt
+    }
+  }
+}

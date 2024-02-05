@@ -1,0 +1,14 @@
+npm init -y
+npm install express --save
+npm install nodemon --save-dev
+npm install graphql express-graphql --save
+npm install lodash --save
+npm install mongoose --save
+npm install dotenv
+npm install dotenv
+npm install create-react-app
+npx create-react-app .
+npm install @apollo/client
+npm install cors --save
+npm install antd --save
+npm install apollo-server-express

@@ -1,0 +1,44 @@
+{
+  user(id:"1"){
+    id
+    name
+    email
+    age
+  }
+}
+
+{
+  users{
+    id
+    name
+    email
+    age
+  }
+}
+
+mutation {
+  CreateUser(name: "cookie", email: "cookie@gmail.com", age: 7) {
+    id
+    name
+    email
+    age
+  }
+}
+
+mutation {
+  DeleteUser(id: "1") {
+    id
+    name
+    email
+    age
+  }
+}
+
+mutation {
+  UpdateUser(id: "1", name: "apsi", email: "apsi@gmail.com", age: 14) {
+    id
+    name
+    email
+    age
+  }
+}

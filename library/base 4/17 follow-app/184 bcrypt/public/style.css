@@ -1,0 +1,35 @@
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+li {
+  list-style: none !important;
+}
+
+body {
+  background-color: #1c1e21; /* Dark background color */
+  color: #ecf0f1; /* Light text color */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #34495e; /* Container background color */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  background-color: #2980b9; /* Card background color */
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

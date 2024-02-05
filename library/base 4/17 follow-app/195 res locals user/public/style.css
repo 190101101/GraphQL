@@ -1,0 +1,14 @@
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+li {
+  list-style: none !important;
+}
+
+body {
+  background-color: #1c1e21; /* Dark background color */
+  color: #ecf0f1; /* Light text color */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}

@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-center">login</h3>
+      <form action="/login" method="POST" enctype="application/html">
+        <div>
+          <input
+            type="text"
+            name="email"
+            class="form-control"
+            placeholder="email"
+            required
+          />
+          <p data-name="email-error"></p>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="password"
+            class="form-control"
+            placeholder="password"
+            required
+          />
+          <p data-name="password-error"></p>
+        </div>
+        <button type="submit" class="btn btn-success">login</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
+
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const email = form.email.value;
+    const password = form.password.value;
+    
+  });
+</script>
