@@ -33,6 +33,11 @@ const CREATE_SNAP = gql`
       id
       text
       createdAt
+      user{
+        id
+        username
+        createdAt
+      }
     }
   }
 `;

@@ -2,11 +2,7 @@ const bcrypt = require("bcrypt");
 const token = require("../../../utils/token");
 
 module.exports = {
-  CreateUser: async (
-    parent,
-    { data: { username, password } },
-    { User, pubsub }
-  ) => {
+  CreateUser: async (parent, { data: { username, password } },{ User }) => {
     const user = await User.findOne({ username });
 
     if (user) {
@@ -14,10 +10,6 @@ module.exports = {
     }
 
     const newUser = await new User({ username, password }).save();
-
-    pubsub.publish("user", {
-      user: newUser,
-    });
 
     return { token: token.generate(newUser, "168h") };
   },

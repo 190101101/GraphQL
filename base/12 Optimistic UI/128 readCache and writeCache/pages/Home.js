@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TimeAgo from "react-timeago";
+// import TimeAgo from "react-timeago";
 import { useMutation, useQuery } from "@apollo/client";
 import { SNAPS } from "../graphql/query";
 import { CREATE_SNAP } from "../graphql/mutation";
@@ -72,7 +72,7 @@ const Home = ({ session }) => {
             name="text"
             className="add-snap__input"
             type="text"
-            disabled={!(session && session.activeUser) || loadingMutation}
+            disabled={!(session && session.activeUser)}
             placeholder={
               session && session.activeUser
                 ? "add Snap"
@@ -80,7 +80,6 @@ const Home = ({ session }) => {
             }
           />
         </form>
-        {loadingMutation && <div className="loading">loading...</div>}
       </div>
       <div>
         {loading && <div className="loading">loading...</div>}
@@ -95,7 +94,8 @@ const Home = ({ session }) => {
                   <span>{snap.text}</span>
                 </div>
                 <div className="date">
-                  <TimeAgo date={snap.createdAt} />
+                  {/* <TimeAgo date={snap.createdAt} /> */}
+                  {snap.createdAt}
                 </div>
               </li>
             ))}

@@ -40,7 +40,6 @@ const Home = ({ session }) => {
           },
         },
       },
-      refetchQueries: [{ query: SNAPS }],
     }
   );
 
