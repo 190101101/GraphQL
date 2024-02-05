@@ -36,7 +36,6 @@ const Form = ({ session }) => {
         },
       },
     },
-    refetchQueries: [{ query: SNAPS }],
   });
 
   const onChange = (e) => {

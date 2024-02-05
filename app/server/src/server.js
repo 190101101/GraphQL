@@ -1,9 +1,8 @@
 require("dotenv").config();
-const http = require("http");
 const mongoose = require("mongoose");
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const { ApolloServer, PubSub } = require("apollo-server-express");
+const { ApolloServer } = require("apollo-server-express");
 const { importSchema } = require("graphql-import");
 const resolvers = require("./graphql/resolvers/index");
 const { User, Snap } = require("./models/index");
@@ -13,16 +12,13 @@ mongoose
   .then((response) => console.log("connected to easysnap"))
   .catch((error) => console.log(error));
 
-const pubsub = new PubSub();
-
 const server = new ApolloServer({
   typeDefs: importSchema("./src/graphql/schema.graphql"),
   resolvers: resolvers,
   context: ({ req }) => ({
-    activeUser: req.activeUser,
+    activeUser: req ? req.activeUser : null,
     User,
     Snap,
-    pubsub,
   }),
 });
 
@@ -33,13 +29,9 @@ app.use((req, res, next) => {
 
   if (token && token.length > 10 && token !== null) {
     try {
-      req.activeUser = jwt.verify(
-        token,
-        process.env.encrypt,
-        (err, decoded) => {
-          return decoded;
-        }
-      );
+      req.activeUser = jwt.verify(token, process.env.encrypt, (err, decoded) => {
+        return decoded;
+      });
     } catch (error) {
       console.log(error);
     }
@@ -49,10 +41,6 @@ app.use((req, res, next) => {
 
 server.applyMiddleware({ app });
 
-const httpServer = http.createServer(app);
-server.installSubscriptionHandlers(httpServer);
-
-httpServer.listen({ port: 4000 }, () => {
-  console.log(`${process.env.localhost}${server.graphqlPath}`);
-  console.log(`${process.env.ws}${server.subscriptionsPath}`);
+app.listen({ port: 4000 }, () => {
+  console.log(`http://localhost:4000/graphql`);
 });
