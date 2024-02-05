@@ -24,6 +24,7 @@ const server = new ApolloServer({
     Snap,
     activeUser: req ? req.activeUser : null,
   }),
+  introspection: true
 });
 
 const app = express();
