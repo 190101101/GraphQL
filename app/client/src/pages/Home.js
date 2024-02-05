@@ -9,13 +9,26 @@ const initalState = {
 };
 
 const Home = ({ session }) => {
-
   const [values, setValues] = useState(initalState);
   const { data, loading, error } = useQuery(SNAPS);
 
-  const [CreateSnapMutation, { loading: loadingMutation }] = useMutation(CREATE_SNAP, {
-    refetchQueries: [{ query: SNAPS }],
-  });
+  const [CreateSnapMutation, { loading: loadingMutation }] = useMutation(
+    CREATE_SNAP,
+    {
+      update(proxy, { data: { CreateSnap } }) {
+        const { snaps } = proxy.readQuery({
+          query: SNAPS,
+        });
+
+        proxy.writeQuery({
+          query: SNAPS,
+          data: {
+            snaps: [CreateSnap, ...snaps],
+          },
+        });
+      },
+    }
+  );
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });

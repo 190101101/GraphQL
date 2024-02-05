@@ -2,3 +2,6 @@ subscriptions-transport-ws
 apollo-link-ws
 apollo-link-ws
 apollo-link-http
+
+after readQuery and readWrite - error
+An error occurred! For more details, see the full error text at https://go.apollo.dev/c/err#%7B%22version%22%3A%223.9.0%22%2C%22message%22%3A12%2C%22args%22%3A%5B%22user%22%2C%22%7B%5Cn%20%20%5C%22__typename%5C%22%3A%20%5C%22Snap%5C%22%2C%5Cn%20%20%5C%22id%5C%22%3A%20%5C%2265c090faa149abb815f501fe%5C%22%2C%5Cn%20%20%5C%22text%5C%22%3A%20%5C%22zxc%5C%22%2C%5Cn%20%20%5C%22createdAt%5C%22%3A%20%5C%222024-02-05T07%3A40%3A42.789Z%5C%22%5Cn%7D%22%5D%7D
