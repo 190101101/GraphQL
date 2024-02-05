@@ -35,7 +35,7 @@ const Home = ({ session }) => {
           text: values.text,
           createdAt: new Date(),
           user: {
-            __type: "User",
+            __typename: "User",
             ...session.activeUser,
           },
         },
