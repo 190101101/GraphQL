@@ -25,3 +25,10 @@ mutation {
     token
   }
 }
+
+mutation{
+  DeleteSnaps{
+    success
+    message
+  }
+}

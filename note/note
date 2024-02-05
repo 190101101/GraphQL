@@ -121,7 +121,8 @@ base\12 Optimistic UI\127 what is Optimistic UI
 base\12 Optimistic UI\128 readCache and writeCache
 base\12 Optimistic UI\129 response 1
 base\12 Optimistic UI\130 response 2
-base\12 Optimistic UI\131 response 3 loader
+base\12 Optimistic UI\131 response 3 loader\client
+base\12 Optimistic UI\131 response 3 loader\server
 
 base\13 subscriptions server\132 subscriptions
 base\13 subscriptions server\133 resolver
