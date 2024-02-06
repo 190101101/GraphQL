@@ -1,9 +1,8 @@
 mutation {
-  CreateUser(data: { username: "cookie", password: "askldjladd" }) {
-    username
-    password
-    createdAt
+  CreateUser(data: { username: "kikusimus 2", password: "kikusimus 2" }) {
+    token
   }
+}
 }
 
 mutation {
