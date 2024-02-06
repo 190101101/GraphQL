@@ -24,6 +24,15 @@ subscription{
   }
 }
 
+subscription {
+  filterSnap(userId: "65bd2cf3cdcb987c44ce296c") {
+    id
+    text
+    createdAt
+  }
+}
+
+
 subscription{
   user{
     id

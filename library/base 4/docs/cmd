@@ -1,5 +1,5 @@
-cd C:\Users\190101101\Desktop\WEB\aos\client
-cd C:\Users\190101101\Desktop\WEB\aos\client
-cd C:\Users\190101101\Desktop\WEB\aos\server
+cd C:\Users\190101101\Desktop\WEB\app\client
+cd C:\Users\190101101\Desktop\WEB\app\client
+cd C:\Users\190101101\Desktop\WEB\app\server
 npm install
 npm start
